@@ -1,0 +1,32 @@
+{
+  "compilerOptions": { // https://www.typescriptlang.org/tsconfig
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true, // Allows you name `* as` in import, e.g. `import React from "react"`
+    "declaration": true, // Generate .d.ts files for every TypeScript or JavaScript file inside your project. These .d.ts files are type definition files which describe the external API of your module.
+    "declarationDir": "lib",
+    "esModuleInterop": true, // Import non-ES modules as default imports.
+    "forceConsistentCasingInFileNames": true, // Forces case sensitivity on file imports - forces compatibility on case-sensitive/case-insensitive systems
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "outDir": "lib", // If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true, // Results in stronger guarantees of program correctness
+    "target": "es5" // Target es5 for IE9/10 strict - https://www.typescriptlang.org/tsconfig#target
+  },
+  "exclude": [
+    "lib",
+    "node_modules"
+  ],
+  "include": [
+    "src"
+  ]
+}

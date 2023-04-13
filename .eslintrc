@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "standard"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "no-null",
+    "promise",
+    "no-only-tests"
+  ],
+  "env": {
+    "browser" : true,
+    "mocha" : true,
+    "node": true
+  },
+  "globals": {
+    "expect"       : false,
+    "should"       : false,
+    "sinon"        : false,
+    "__DEV__"      : false,
+    "__TEST__"     : false,
+    "__PROD__"     : false,
+    "__COVERAGE__" : false
+  },
+  "rules": {
+    "indent"                      : ["warn", 2, { "SwitchCase": 1 }],
+    "no-unused-vars"              : "off",
+    "key-spacing"                 : "off",
+    "jsx-quotes"                  : [2, "prefer-single"],
+    "max-len"                     : [2, 140, 2],
+    "object-curly-spacing"        : [2, "always"],
+    "no-null/no-null"             : 2,
+    "no-case-declarations"        : 2,
+    "semi"                        : [1, "never"],
+    "comma-dangle"                : "off",
+    "no-undef"                    : "off",
+    "one-var"                     : "off",
+    "no-only-tests/no-only-tests" : "error"
+  }
+}
