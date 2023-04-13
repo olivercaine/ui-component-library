@@ -11,7 +11,7 @@ export interface IProps {
   text?: string
 }
 
-export const Button: FC<IProps> = ({ onClick, text = 'Default button text from module' }: IProps) =>
+export const Button: FC<IProps> = ({ onClick, text = 'Default button text' }: IProps) =>
   <button className='btn btn-primary ollie' onClick={onClick}>
     {text}
   </button>
