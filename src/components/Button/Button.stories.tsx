@@ -19,4 +19,4 @@ const defaultArgs: IProps = {
 
 export const Default = template({ ...defaultArgs })
 
-export const CustomText = template({ ...defaultArgs, text: 'My button label' })
+export const CustomText = template({ ...defaultArgs, text: 'Custom button text' })
