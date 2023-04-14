@@ -10,9 +10,10 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "echo \"Error - tests have not been configured yet\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build": "rollup -c",
     "storybook:build": "build-storybook",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build'",
+    "storybook:test": "start-server-and-test storybook 6006 'test-storybook --browsers chromium'",
+    "build": "rollup -c",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:test'",
     "prepublishOnly": "yarn build"
   },
   "husky": {
@@ -69,6 +70,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.29.0",
+    "start-server-and-test": "^1.15.4",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
