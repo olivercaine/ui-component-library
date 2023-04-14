@@ -2,7 +2,7 @@ import React, { FC, MouseEventHandler } from 'react'
 
 export interface IProps {
   /**
-  The callback when the button is clicked
+  The callback to call when the button is clicked
   */
   onClick: MouseEventHandler<HTMLButtonElement>
   /**
