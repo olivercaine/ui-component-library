@@ -12,6 +12,6 @@ export interface IProps {
 }
 
 export const Button: FC<IProps> = ({ onClick, text = 'Default button text' }: IProps) =>
-  <button className='btn btn-primary ollie' onClick={onClick}>
+  <button className='btn btn-primary' onClick={onClick}>
     {text}
   </button>
