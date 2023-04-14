@@ -13,7 +13,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Build Static Storybook
-        run: npm storybook:build
+        run: npm run storybook:build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
