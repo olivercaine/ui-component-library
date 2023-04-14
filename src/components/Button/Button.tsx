@@ -6,7 +6,7 @@ export interface IProps {
   */
   onClick: MouseEventHandler<HTMLButtonElement>
   /**
-  Text to be shown in the button
+  Button text
   */
   text?: string
 }
