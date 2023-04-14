@@ -13,7 +13,7 @@
     "storybook:build": "build-storybook",
     "storybook:test": "start-server-and-test storybook 6006 'test-storybook --browsers chromium'",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build'",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:test'",
     "prepublishOnly": "yarn build"
   },
   "husky": {
