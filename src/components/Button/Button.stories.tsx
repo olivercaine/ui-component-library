@@ -21,7 +21,7 @@ const defaultArgs: IProps = {
 
 export const Default = template({ ...defaultArgs })
 
-export const CustomText = template({ ...defaultArgs, text: 'Custom button text', onClick: jest.fn() })
+export const CustomText = template({ ...defaultArgs, text: 'Custom btn text', onClick: jest.fn() })
 CustomText.play = async ({ args, canvasElement }) => {
   const canvas = await within(canvasElement)
   await userEvent.click(canvas.getByRole('button'))
