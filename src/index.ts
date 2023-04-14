@@ -1,3 +1,3 @@
-import { Button } from './components/Button'
+import { Button } from './ui/basics'
 
 export { Button }
