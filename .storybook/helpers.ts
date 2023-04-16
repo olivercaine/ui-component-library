@@ -1,14 +1,15 @@
-import { ComponentStory, Story } from '@storybook/react';
+import { ComponentStory, Story } from '@storybook/react'
 
 export const storyTemplate = <P,>(Component: (props: P) => any) => (
   props: P
 ): Story<P> => {
-  const template: ComponentStory<typeof Component> = (args) => Component(args);
-  const story = template.bind({});
-  story.args = props;
-  return story;
+  const template: ComponentStory<typeof Component> = (args) => Component(args)
+  const story = template.bind({})
+  story.args = props
+  return story
 }
 
+// Based on "GE’s Predix Design System' - https://medium.com/ge-design/ges-predix-design-system-8236d47b0891
 export enum StoryTypes {
   /** Applications are things which contain a unique set of Features, e.g. a ticket booking application */
   Applications = "Applications",

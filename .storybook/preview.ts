@@ -1,6 +1,8 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { StoryTypes } from './helpers'
 
 export const parameters = {
+  layout: 'fullscreen',
   actions: { argTypesRegex: "^on[A-Z].*" },
   viewport: {
     defaultViewport: 'iphone5',
@@ -9,14 +11,14 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Applications',
-        'Features',
-        'Templates',
-        'Components',
-        'Basics',
-        'Principles',
+        StoryTypes.Applications,
+        StoryTypes.Features,
+        StoryTypes.Templates,
+        StoryTypes.Components,
+        StoryTypes.Basics,
+        StoryTypes.Principles,
         '*'
       ],
     },
   },
-}
+} 
