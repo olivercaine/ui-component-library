@@ -1,4 +1,5 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import '../src/ui/styles/base.css'
 import { StoryTypes } from './helpers'
 
 export const parameters = {
