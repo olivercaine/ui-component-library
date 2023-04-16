@@ -7,11 +7,11 @@ const config = {
   },
   stories: ['../src/**/*.stories.tsx'],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-actions',
     '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-links',
     '@storybook/addon-postcss',
-    '@storybook/addon-interactions'
+    '@storybook/addon-actions',
   ],
   features: {
     interactionsDebugger: true, // Enable playback controls
