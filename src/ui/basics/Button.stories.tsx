@@ -1,4 +1,5 @@
 import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
 import { expect, jest } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
@@ -29,3 +30,5 @@ CustomText.play = async ({ args, canvasElement }) => {
     expect(args.onClick).toHaveBeenCalledTimes(1)
   })
 }
+
+export const LinkToStory = template({ onClick: linkTo('Components/CustomComponent', 'Default'), text: 'Go to components story' })
