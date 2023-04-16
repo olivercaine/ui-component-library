@@ -17,6 +17,9 @@ const config = {
     interactionsDebugger: true, // Enable playback controls
     // storyStoreV7: true, // https://storybook.js.org/docs/react/configure/webpack#bundle-splitting
   },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript-plugin'
+  },
   // @ts-expect-error
   docs: {
     autodocs: true
