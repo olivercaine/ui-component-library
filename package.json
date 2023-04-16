@@ -1,7 +1,9 @@
 {
   "name": "ui-component-library",
-  "version": "1.0.28",
-  "description": "A storybook 6 with TypeScript demo",
+  "author": "Oliver Caine",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A React Storybook boilerplate for rapidly developing user interfaces",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
@@ -33,8 +35,6 @@
     "react",
     "typescript"
   ],
-  "author": "Oliver Caine",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@rollup/plugin-commonjs": "^17.0.0",
