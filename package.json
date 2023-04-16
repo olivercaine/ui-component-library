@@ -11,9 +11,11 @@
     "test": "echo \"Error - tests have not been configured yet\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "storybook:test": "start-server-and-test storybook 6006 'test-storybook --browsers chromium'",
+    "storybook:test": "test-storybook --browsers chromium",
+    "storybook:test:watch": "npm run storybook:test -- --watch",
+    "storybook:start-and-test": "start-server-and-test storybook 6006 'storybook:test'",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:test'",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "prepublishOnly": "yarn build"
   },
   "husky": {

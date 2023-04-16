@@ -9,9 +9,6 @@ import { Button } from '../../index'
 export default {
   component: Button,
   title: 'Basics/Button',
-  argTypes: {
-    textColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Button>
 
 const template = storyTemplate(Button)
@@ -22,8 +19,10 @@ const defaultArgs = {
 
 export const Default = template({ ...defaultArgs })
 
+export const Disabled = template({ ...defaultArgs, disabled: true })
+
 export const CustomText = template({ ...defaultArgs, text: 'Custom button text', onClick: jest.fn() })
-CustomText.play = async ({ args, canvasElement }) => {
+CustomText.play = async ({ canvasElement, args }) => {
   const canvas = await within(canvasElement)
   await userEvent.click(canvas.getByRole('button'))
   await waitFor(() => {

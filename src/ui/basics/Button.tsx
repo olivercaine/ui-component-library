@@ -2,16 +2,24 @@ import React, { FC, MouseEventHandler } from 'react'
 
 export interface IProps {
   /**
-  The callback to call when the button is clicked
-  */
-  onClick: MouseEventHandler<HTMLButtonElement>
-  /**
   Button text
   */
   text?: string
+  /**
+  Disable the button
+  */
+  disabled?: boolean
+  /**
+  The callback to call when the button is clicked
+  */
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
 
-export const Button: FC<IProps> = ({ onClick, text = 'Default button text' }: IProps) =>
-  <button className='btn btn-primary' onClick={onClick}>
+export const Button: FC<IProps> = ({
+  text = 'Default button text',
+  disabled = false,
+  onClick = console.log,
+}) =>
+  <button className='btn btn-primary' disabled={disabled} onClick={onClick}>
     {text}
   </button>
