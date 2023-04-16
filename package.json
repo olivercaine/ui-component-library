@@ -10,6 +10,7 @@
   "scripts": {
     "lint": "eslint -c .eslintrc --ext .ts src",
     "lint:fix": "npm run lint -- --fix",
+    "dev": "npm i && concurrently 'npm run storybook' 'npm run storybook:test:watch'",
     "test": "echo \"Error - tests have not been configured yet\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
