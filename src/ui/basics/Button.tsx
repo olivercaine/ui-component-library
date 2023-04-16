@@ -20,6 +20,6 @@ export const Button: FC<IProps> = ({
   disabled = false,
   onClick = console.log,
 }) =>
-  <button className='btn btn-primary' disabled={disabled} onClick={onClick}>
+  <button className='button' disabled={disabled} onClick={onClick}>
     {text}
   </button>

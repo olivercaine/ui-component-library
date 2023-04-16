@@ -1,16 +1,12 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Node.js CI
-
 on:
   push:
     branches: ['**']
   schedule:
-    # Every Friday at 6pm
-    - cron: "0 18 * * FRI"
+    - cron: "0 18 * * FRI" # Every Friday at 6pm
   workflow_dispatch: # Enables running workflow manually
-
 jobs:
   build:
     timeout-minutes: 30
