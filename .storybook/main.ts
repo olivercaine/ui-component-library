@@ -5,13 +5,13 @@ const config = {
   core: {
     builder: 'webpack5'
   },
-  stories: ["../src/**/*.stories.tsx"],
+  stories: ['../src/**/*.stories.tsx'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-actions",
-    "@storybook/addon-essentials",
-    "@storybook/addon-postcss",
-    "@storybook/addon-interactions"
+    '@storybook/addon-links',
+    '@storybook/addon-actions',
+    '@storybook/addon-essentials',
+    '@storybook/addon-postcss',
+    '@storybook/addon-interactions'
   ],
   features: {
     interactionsDebugger: true, // Enable playback controls
