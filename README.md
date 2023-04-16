@@ -4,6 +4,8 @@
 
 Pre-configured React Storybook package for rapidly developing user interfaces
 
+[Demo](https://olivercaine.github.io/ui-component-library)
+
 ## Tools & Frameworks
 
 1. [React Storybook](https://storybook.js.org/) for UI components
@@ -21,5 +23,5 @@ Pre-configured React Storybook package for rapidly developing user interfaces
 1. Automatic lint fixes using EsLint
 2. [Storybook Story snippet](.vscode/snippets.code-snippets)
 3. [Story interaction test example](src/ui/basics/Button.stories.tsx)
-4. Auto-deploy Storybook to GitHub pages ([demo](https://olivercaine.github.io/ui-component-library))
+4. Auto-deploy Storybook to GitHub pages
    1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
