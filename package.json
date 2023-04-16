@@ -41,7 +41,7 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^7.0.5",
-    "@storybook/addon-interactions": "^7.0.5",
+    "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.5.16",
