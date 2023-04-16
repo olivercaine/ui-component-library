@@ -3,7 +3,7 @@ import { expect, jest } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { storyTemplate } from '../../../.storybook/helpers'
-import { Button, IProps } from './Button'
+import { Button } from '../../index'
 
 export default {
   component: Button,
@@ -15,7 +15,7 @@ export default {
 
 const template = storyTemplate(Button)
 
-const defaultArgs: IProps = {
+const defaultArgs = {
   onClick: action('Clicked'),
 }
 
