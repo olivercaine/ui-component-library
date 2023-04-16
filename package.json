@@ -48,7 +48,7 @@
     "@storybook/core-common": "^6.5.16",
     "@storybook/jest": "0.0.10",
     "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/node-logger": "^6.5.16",
+    "@storybook/node-logger": "^7.0.5",
     "@storybook/react": "^6.5.16",
     "@storybook/test-runner": "^0.7.2",
     "@storybook/testing-library": "0.0.13",
