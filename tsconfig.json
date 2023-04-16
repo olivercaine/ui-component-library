@@ -3,22 +3,22 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true, // Allows you name `* as` in import, e.g. `import React from "react"`
     "declaration": true, // Generate .d.ts files for every TypeScript or JavaScript file inside your project. These .d.ts files are type definition files which describe the external API of your module.
-    "declarationDir": "lib",
+    "declarationDir": "lib", // Define where declaration files are emitted. - https://www.typescriptlang.org/tsconfig#skipLibCheck
     "esModuleInterop": true, // Import non-ES modules as default imports.
     "forceConsistentCasingInFileNames": true, // Forces case sensitivity on file imports - forces compatibility on case-sensitive/case-insensitive systems
     "isolatedModules": true,
-    "jsx": "react",
+    "jsx": "react", // Controls how JSX constructs are emitted in JavaScript files - https://www.typescriptlang.org/tsconfig#jsx
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
+    "module": "esnext", // Sets the module system for the program - https://www.typescriptlang.org/tsconfig#module
+    "moduleResolution": "node", // Specify the module resolution strategy - https://www.typescriptlang.org/tsconfig#moduleResolution
+    "noEmit": true, // Do not emit compiler output files like JavaScript source code, source-maps or declarations - https://www.typescriptlang.org/tsconfig#noEmit
     "outDir": "lib", // If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
+    "resolveJsonModule": true, // Allows importing modules with a ‘.json’ extension - https://www.typescriptlang.org/tsconfig#resolveJsonModule
+    "skipLibCheck": true, // Skip type checking of declaration files - https://www.typescriptlang.org/tsconfig#skipLibCheck
     "strict": true, // Results in stronger guarantees of program correctness
     "target": "es5", // Target es5 for IE9/10 strict - https://www.typescriptlang.org/tsconfig#target
     "types": [
