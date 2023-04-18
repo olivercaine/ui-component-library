@@ -6,7 +6,7 @@ export const parameters = {
   layout: 'fullscreen',
   actions: { argTypesRegex: "^on[A-Z].*" },
   viewport: {
-    defaultViewport: 'iphone5',
+    defaultViewport: 'iphone6',
     viewports: INITIAL_VIEWPORTS
   },
   options: {
