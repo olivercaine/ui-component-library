@@ -61,7 +61,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ matrix.node }}
-
       - run: npm ci
       - run: npm run build
       - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version
@@ -70,7 +69,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
             name: package
-            path: "ui-component-library/*.tgz"
+            path: "./*.tgz"
 
   publish:
     name: "Publish to GitHub Packages"
