@@ -35,9 +35,6 @@ on:
 
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: ui-component-library
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -55,9 +52,6 @@ jobs:
     - run: npm run health-check
 
   package:
-    defaults:
-      run:
-        working-directory: ui-component-library
     needs: [build]
     runs-on: ubuntu-latest
     steps:
