@@ -7,6 +7,9 @@
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "lint": "eslint -c .eslintrc --ext .ts src",
     "lint:fix": "npm run lint -- --fix",
