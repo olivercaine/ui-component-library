@@ -27,4 +27,28 @@ Pre-configured React Storybook package for rapidly developing user interfaces
 3. [Story interaction test example](src/ui/basics/Button.stories.tsx)
 
 4. Auto-deploy Storybook to GitHub pages
+   
    1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
+
+## How to Use
+
+Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
+
+```
+# .npmrc
+@olivercaine:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+```
+
+Import the package into your app:
+
+```typescript
+// CustomComponentWrapper.tsx
+import { CustomComponent } from '@olivercaine/ui-component-library'
+import React from 'react'
+
+export const Button = () =>
+  <>
+    <CustomComponent key={1} />
+  </>
+```
