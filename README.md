@@ -37,7 +37,7 @@ Pre-configured React Storybook package for rapidly developing user interfaces
 ```
 # .npmrc
 @olivercaine:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+//npm.pkg.github.com/:_authToken=<YOUR_GITHUB_TOKEN>
 ```
 
 2. Install the package
@@ -45,18 +45,16 @@ Pre-configured React Storybook package for rapidly developing user interfaces
 Add the following to your dependencies:
 
 ```
-# ackage.json
+# package.json
 "@olivercaine/ui-component-library": "<VERSION>",
 ```
+
+<VERSION> can be found on the [packages page](https://github.com/olivercaine/ui-component-library/pkgs/npm/ui-component-library).
 
 Then run 
 
 ```
-npm install
-```
-or
-```
-yarn install
+npm install / yarn install
 ```
 
 3. Import the package into your app:
