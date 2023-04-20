@@ -32,7 +32,7 @@ Pre-configured React Storybook package for rapidly developing user interfaces
 
 ## How to Use
 
-Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
+1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
 
 ```
 # .npmrc
@@ -40,7 +40,26 @@ Register the GitHub Package Registry in your .npmrc file ([additional docs](http
 //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 ```
 
-Import the package into your app:
+2. Install the package
+
+Add the following to your dependencies:
+
+```
+# ackage.json
+"@olivercaine/ui-component-library": "<VERSION>",
+```
+
+Then run 
+
+```
+npm install
+```
+or
+```
+yarn install
+```
+
+3. Import the package into your app:
 
 ```typescript
 // CustomComponentWrapper.tsx
