@@ -76,3 +76,4 @@ export const Button = () =>
 Error message: `Permission permission_denied: write_package`
 Cause: GitHub Actions does not have permission to publish the package
 Solution: Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
+Solution2: Make sure that the name in package.json starts with `@[GitHub username]/`
