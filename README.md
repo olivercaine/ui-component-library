@@ -69,3 +69,10 @@ export const Button = () =>
     <CustomComponent key={1} />
   </>
 ```
+
+## Troubleshooting
+
+### Write package permission denied
+Error message: `Permission permission_denied: write_package`
+Cause: GitHub Actions does not have permission to publish the package
+Solution: Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
