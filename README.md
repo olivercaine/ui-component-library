@@ -49,7 +49,7 @@ Add the following to your dependencies:
 "@olivercaine/ui-component-library": "<VERSION>",
 ```
 
-<VERSION> can be found on the [packages page](https://github.com/olivercaine/ui-component-library/pkgs/npm/ui-component-library).
+VERSION can be found on the [packages page](https://github.com/olivercaine/ui-component-library/pkgs/npm/ui-component-library).
 
 Then run 
 
@@ -73,7 +73,11 @@ export const Button = () =>
 ## Troubleshooting
 
 ### Write package permission denied
+
 Error message: `Permission permission_denied: write_package`
+
 Cause: GitHub Actions does not have permission to publish the package
+
 Solution: Enable [GitHub Repo] > Settings > Actions > General > "Read and write permissions"
+
 Solution2: Make sure that the name in package.json starts with `@[GitHub username]/`
