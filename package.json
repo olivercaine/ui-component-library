@@ -23,7 +23,7 @@
     "storybook:build": "build-storybook",
     "test": "echo \"Tests have not been configured yet\"",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:start-and-test'",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "prepublishOnly": "npm build"
   },
   "husky": {
