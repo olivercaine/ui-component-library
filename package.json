@@ -13,16 +13,18 @@
   "scripts": {
     "lint": "eslint -c .eslintrc --ext .ts src",
     "lint:fix": "npm run lint -- --fix",
-    "dev": "npm i && concurrently 'npm run storybook' 'npm run storybook:test:watch'",
-    "test": "echo \"Error - tests have not been configured yet\" && exit 1",
+    "dev": "concurrently 'npm install' 'npm run storybook:start-and-test:watch'",
+    "dev:docker": "docker run --rm -it -w /app -v ${PWD}:/app -p 6006:6006 $(docker build . -q) sh -c 'npm run dev'",
+    "test": "echo \"Tests have not been configured yet\"",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
     "storybook:test": "test-storybook --browsers chromium",
     "storybook:test:watch": "npm run storybook:test -- --watch",
-    "storybook:start-and-test": "start-server-and-test storybook 6006 'storybook:test'",
+    "storybook:start-and-test": "start-test storybook 6006 'storybook:test'",
+    "storybook:start-and-test:watch": "start-test storybook 6006 'storybook:test:watch'",
+    "storybook:build": "build-storybook",
     "build": "rollup -c",
     "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm run storybook:build' 'npm run storybook:start-and-test'",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "npm build"
   },
   "husky": {
     "hooks": {
