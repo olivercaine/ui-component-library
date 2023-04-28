@@ -12,6 +12,7 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-postcss',
     '@storybook/addon-actions',
+    '@storybook/addon-jest'
   ],
   features: {
     interactionsDebugger: true, // Enable playback controls

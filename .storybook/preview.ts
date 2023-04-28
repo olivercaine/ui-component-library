@@ -1,4 +1,6 @@
+import { withTests } from '@storybook/addon-jest'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import results from '../.jest-test-results.json'
 import '../src/ui/styles/base.css'
 import { StoryTypes } from './helpers'
 
@@ -22,4 +24,10 @@ export const parameters = {
       ],
     },
   },
-} 
+}
+
+export const decorators = [
+  withTests({
+    results,
+  }),
+]
