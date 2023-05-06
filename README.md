@@ -44,7 +44,9 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 ```
 npm install @olivercaine/ui-component-library@latest
-# or
+```
+or
+```
 yarn install @olivercaine/ui-component-library@latest
 ```
 
