@@ -6,7 +6,7 @@
   "description": "A React Storybook boilerplate for rapidly developing user interfaces",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "types": "lib/src/index.d.ts",
   "files": [
     "lib"
   ],
