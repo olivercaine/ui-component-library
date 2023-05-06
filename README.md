@@ -44,6 +44,7 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 ```
 npm install @olivercaine/ui-component-library@latest
+# or
 yarn install @olivercaine/ui-component-library@latest
 ```
 
@@ -53,10 +54,13 @@ Note: to install a previous release, replace `latest` with one of the versions o
 
 ```typescript
 import React from 'react'
-import { CustomComponent } from '@olivercaine/ui-component-library'
+import { Button } from '@olivercaine/ui-component-library'
 
-export const ButtonWrapper = () =>
-  <Button key={1} />
+export const MyComponent = ({onClick}) =>
+  <>
+    {/* Your custom code */}
+    <Button key={1} onClick={onClick} />
+  </>
 ```
 
 ## Troubleshooting
