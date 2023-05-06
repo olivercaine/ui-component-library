@@ -1,4 +1,4 @@
-# ui-component-library
+# Boilerplate UI Component Library
 
 [![Node.js CI](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml) [![Deploy Static Storybook](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml)
 
@@ -30,7 +30,7 @@ Boilerplate project built on React Storybook to enable rapid development of user
    
    1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
 
-## How to Use
+## How to use
 
 1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
 
@@ -44,6 +44,7 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 ```
 npm install @olivercaine/ui-component-library@latest
+# or
 yarn install @olivercaine/ui-component-library@latest
 ```
 
@@ -53,10 +54,13 @@ Note: to install a previous release, replace `latest` with one of the versions o
 
 ```typescript
 import React from 'react'
-import { CustomComponent } from '@olivercaine/ui-component-library'
+import { Button } from '@olivercaine/ui-component-library'
 
-export const ButtonWrapper = () =>
-  <Button key={1} />
+export const MyComponent = ({onClick}) =>
+  <>
+    {/* Your custom code */}
+    <Button key={1} onClick={onClick} />
+  </>
 ```
 
 ## Troubleshooting
