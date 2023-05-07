@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         cache: 'npm'
-        node-version: 18
+        node-version: 18.x
     - run: npm ci
     - run: npm run health-check
     - run: npm version prerelease --preid=$GITHUB_RUN_ID --no-git-tag-version
@@ -37,9 +37,9 @@ jobs:
       uses: actions/download-artifact@v2
       with:
           name: package
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
       with:
-        node-version: 14.x
+        node-version: 18.x
         registry-url: https://npm.pkg.github.com/
         scope: "@olivercaine"
     - run: echo "registry=https://npm.pkg.github.com/@olivercaine" >> .npmrc
