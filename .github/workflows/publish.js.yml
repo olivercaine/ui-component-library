@@ -9,18 +9,14 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node-version: [ 14, 16, 18 ]
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Setup node
       uses: actions/setup-node@v3
       with:
         cache: 'npm'
-        node-version: ${{ matrix.node }}
+        node-version: 18
     - run: npm ci
     - run: npm run health-check
     - run: npm version prerelease --preid=$GITHUB_RUN_ID --no-git-tag-version
