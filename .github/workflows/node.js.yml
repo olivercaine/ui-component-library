@@ -4,7 +4,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ '** ']
   pull_request:
     branches: ['**']
   schedule:
@@ -26,45 +26,4 @@ jobs:
         cache: 'npm'
         node-version: ${{ matrix.node }}
     - run: npm ci
-    - run: npm run health-check
-
-  package:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          cache: 'npm'
-          node-version: ${{ matrix.node }}
-      - run: npm ci
-      - run: npm run build
-      - run: npm version prerelease --preid=$GITHUB_RUN_ID --no-git-tag-version
-      # - run: npm version --newversion=1.0.$GITHUB_RUN_ID --no-git-tag-version
-      - run: npm pack
-      - name: Upload
-        uses: actions/upload-artifact@v2
-        with:
-            name: package
-            path: "./*.tgz"
-
-  publish:
-    name: "Publish to GitHub Packages"
-    needs: [package]
-    runs-on: ubuntu-latest
-    if: github.repository_owner == 'olivercaine' # && github.token != ''
-    steps:
-    - name: Upload
-      uses: actions/download-artifact@v2
-      with:
-          name: package
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-        registry-url: https://npm.pkg.github.com/
-        scope: "@olivercaine"
-    - run: echo "registry=https://npm.pkg.github.com/@olivercaine" >> .npmrc
-    - run: npm publish $(ls *.tgz)
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}      
+    - run: npm run health-check 
