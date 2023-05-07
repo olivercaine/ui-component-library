@@ -30,4 +30,4 @@ CustomText.play = async ({ canvasElement, args }) => {
   })
 }
 
-export const LinkToStory = template({ onClick: linkTo('Components/CustomComponent', 'Default'), text: 'Go to story' })
+export const LinkToStory = template({ onClick: linkTo('Components/CustomComponent', 'Default'), text: 'Go to a story' })

@@ -1,4 +1,5 @@
 name: Storybook Deployment
+
 on: 
   push:
     branches: [ '** ']  
@@ -6,6 +7,7 @@ on:
   schedule:
     - cron: '0 18 1 * *' # 1st of every month    
   workflow_dispatch: # Enables running workflow manually
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
