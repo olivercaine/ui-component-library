@@ -2,7 +2,7 @@ name: Storybook Deployment
 
 on: 
   push:
-    branches: [ '** ']  
+    branches: [ 'main' ]  
     paths: ["src/**"] # Trigger the action only when files change in the folders defined here
   schedule:
     - cron: '0 18 1 * *' # 1st of every month    
