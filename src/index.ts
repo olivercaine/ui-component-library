@@ -1,5 +1,7 @@
-import { Button } from './ui/basics'
+import { Button } from './ui/basics/Button'
 import { CustomComponent } from './ui/components'
 
-export { Button }
-export { CustomComponent }
+export {
+  Button,
+  CustomComponent
+}
