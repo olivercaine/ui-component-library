@@ -11,7 +11,7 @@
     "lib"
   ],
   "scripts": {
-    "dev": "concurrently 'npm install' 'npm run storybook:start-and-test:watch'",
+    "dev": "concurrently 'npm install' 'npm run test:watch' 'npm run storybook:start-and-test:watch'",
     "dev:docker": "docker run --rm -it -w /app -v ${PWD}:/app -p 6006:6006 $(docker build . -q) sh -c 'npm run dev'",
     "lint": "eslint -c .eslintrc --ext .ts src",
     "lint:fix": "npm run lint -- --fix",
@@ -22,6 +22,7 @@
     "storybook:start-and-test:watch": "start-test storybook 6006 'storybook:test:watch'",
     "storybook:build": "build-storybook",
     "test": "jest --json --outputFile=.jest-test-results.json",
+    "test:watch": "npm test -- --watch",
     "build": "rollup -c",
     "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "prepublishOnly": "npm build"
