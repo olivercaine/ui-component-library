@@ -1,7 +1,7 @@
 // import { StorybookConfig } from '@storybook/core-common'
 
+// const config: StorybookConfig = {
 const config = {
-  // const config: StorybookConfig = {
   core: {
     builder: 'webpack5'
   },
@@ -21,7 +21,6 @@ const config = {
   typescript: {
     reactDocgen: 'react-docgen-typescript-plugin'
   },
-  // @ts-expect-error
   docs: {
     autodocs: true
   }
