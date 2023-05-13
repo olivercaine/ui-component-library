@@ -23,5 +23,5 @@ jobs:
       with:
         cache: 'npm'
         node-version: ${{ matrix.node }}
-    - run: npm ci
+    - run: npm ci --ignore-scripts
     - run: npm run health-check 
