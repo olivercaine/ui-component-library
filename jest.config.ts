@@ -13,6 +13,21 @@ const config: Config = {
   randomize: true, // Randomize the order of the tests in a file
   maxConcurrency: 20, // A number limiting the number of tests that are allowed to run at the same time when using test.concurrent
   testEnvironment: 'jsdom', // Run in a browser-like environment rather than Node
+  // coverage config -----------------------
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!**/*.stories.{ts,tsx}',
+    '!**/node_modules/**',
+    '!**/vendor/**',
+  ],
+  coverageThreshold: { // This will be used to configure minimum threshold enforcement for coverage results
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100
+    },
+  },
 }
 
 export default config
