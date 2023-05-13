@@ -24,11 +24,9 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 2. [Storybook Story snippet](.vscode/snippets.code-snippets)
 
-3. [Story interaction test example](src/ui/basics/Button.stories.tsx)
+3. [Story interaction test example](src/ui/basics/Button/Button.stories.tsx)
 
-4. Auto-deploy Storybook to GitHub pages
-   
-   1. Enable "Read and write permissions" in [GitHub Repo] > Settings > Actions > General to allow this
+4. Auto-deploy Storybook to GitHub pages (demo above)
 
 ## How to use
 
