@@ -26,7 +26,9 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 3. [Story interaction test example](src/ui/basics/Button/Button.stories.tsx)
 
-4. Auto-deploy Storybook to GitHub pages (demo above)
+4. [@storybook/addon-links](https://www.npmjs.com/package/@storybook/addon-links) for linking from one story to another
+
+5. Auto-deploy Storybook to GitHub pages (demo above)
 
 ## Getting started
 
