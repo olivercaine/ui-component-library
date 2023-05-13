@@ -3,8 +3,8 @@ import { linkTo } from '@storybook/addon-links'
 import { expect, jest } from '@storybook/jest'
 import { ComponentMeta } from '@storybook/react'
 import { userEvent, waitFor, within } from '@storybook/testing-library'
-import { storyTemplate } from '../../../.storybook/helpers'
-import { Button } from '../../index'
+import { storyTemplate } from '../../../../.storybook/helpers'
+import { Button } from '../../../index'
 
 export default {
   component: Button,
@@ -30,4 +30,4 @@ CustomText.play = async ({ canvasElement, args }) => {
   })
 }
 
-export const LinkToStory = template({ onClick: linkTo('Components/CustomComponent', 'Default'), text: 'Go to components story' })
+export const LinkToStory = template({ onClick: linkTo('Components/CustomComponent', 'Default'), text: 'Go to a story' })

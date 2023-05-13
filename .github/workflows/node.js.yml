@@ -4,9 +4,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ '**' ]
+  schedule:
+    - cron: '0 18 1 * *' # 1st of every month    
   workflow_dispatch: # Enables running workflow manually
 
 jobs:
@@ -15,54 +15,31 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [ 14, 16, 18 ]
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup node
-      uses: actions/setup-node@v3
-      with:
-        cache: 'npm'
-        node-version: ${{ matrix.node }}
-    - run: npm ci
-    - run: npm run health-check
-
-  package:
-    needs: [build]
-    runs-on: ubuntu-latest
+        node-version: [ 16, 18 ]
     steps:
       - uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          cache: 'npm'
-          node-version: ${{ matrix.node }}
-      - run: npm ci
-      - run: npm run build
-      - run: npm version prerelease --preid=$GITHUB_RUN_ID --no-git-tag-version
-      # - run: npm version --newversion=1.0.$GITHUB_RUN_ID --no-git-tag-version
-      - run: npm pack
-      - name: Upload
-        uses: actions/upload-artifact@v2
-        with:
-            name: package
-            path: "./*.tgz"
 
-  publish:
-    name: "Publish to GitHub Packages"
-    needs: [package]
-    runs-on: ubuntu-latest
-    if: github.repository_owner == 'olivercaine' # && github.token != ''
-    steps:
-    - name: Upload
-      uses: actions/download-artifact@v2
-      with:
-          name: package
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-        registry-url: https://npm.pkg.github.com/
-        scope: "@olivercaine"
-    - run: echo "registry=https://npm.pkg.github.com/@olivercaine" >> .npmrc
-    - run: npm publish $(ls *.tgz)
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}      
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: npm list
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Perform health check
+        run: npm run health-check 
