@@ -41,5 +41,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Auto-lint app
+        shell: bash      
+        run: |
+          ./.github/workflows/code-lint.sh        
+
       - name: Perform health check
         run: npm run health-check 
