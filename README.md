@@ -28,6 +28,12 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 4. Auto-deploy Storybook to GitHub pages (demo above)
 
+## Getting started
+
+```
+npm run dev
+```
+
 ## How to use
 
 1. Register the GitHub Package Registry in your .npmrc file ([additional docs](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)):
