@@ -25,6 +25,9 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
+
+      - name: Run tests (for @storybook/addon-jest)
+        run: npm test
       
       - name: Build static Storybook
         run: npm run storybook:build
