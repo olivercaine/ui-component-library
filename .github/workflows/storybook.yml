@@ -22,18 +22,11 @@ jobs:
         with:
           cache: 'npm'
           node-version: 18  
-          
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-          
       
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
       
-      - name: Build Static Storybook
+      - name: Build static Storybook
         run: npm run storybook:build
       
       - name: Deploy to GitHub Pages
