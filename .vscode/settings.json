@@ -17,5 +17,10 @@
   "typescript.format.semicolons": "remove",
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#dd98ff"
+  },
+  "jest.autoRun": {
+    "watch": false,
+    "onSave": "test-src-file",
+    "onStartup": ["all-tests"]
   }
 }

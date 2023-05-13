@@ -32,22 +32,6 @@
       "pre-push": "npm run health-check"
     }
   },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "ts-jest"
-    },
-    "modulePathIgnorePatterns": [
-      "node_modules",
-      "jest-test-results.json"
-    ],
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-    "testEnvironment": "jsdom",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
-  },
   "np": {
     "publish": false,
     "tests": false
@@ -104,6 +88,7 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "start-server-and-test": "^1.15.4",
     "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
