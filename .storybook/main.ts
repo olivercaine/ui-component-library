@@ -1,7 +1,7 @@
 // import { StorybookConfig } from '@storybook/core-common'
 
+// const config: StorybookConfig = {
 const config = {
-  // const config: StorybookConfig = {
   core: {
     builder: 'webpack5'
   },
@@ -12,6 +12,7 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-postcss',
     '@storybook/addon-actions',
+    '@storybook/addon-jest'
   ],
   features: {
     interactionsDebugger: true, // Enable playback controls
@@ -20,7 +21,6 @@ const config = {
   typescript: {
     reactDocgen: 'react-docgen-typescript-plugin'
   },
-  // @ts-expect-error
   docs: {
     autodocs: true
   }

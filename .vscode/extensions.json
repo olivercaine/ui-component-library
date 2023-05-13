@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "Orta.vscode-jest",
+        "andys8.jest-snippets"
     ]
 }
