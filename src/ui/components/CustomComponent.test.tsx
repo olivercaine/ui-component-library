@@ -5,6 +5,6 @@ import { CustomComponent } from './CustomComponent'
 describe('CustomComponent', () => {
   it('Should contain "My custom component text"', () => {
     render(<CustomComponent />)
-    expect(screen.getByText('My custom component text')).toBeInTheDocument()
+    expect(screen.getByText("My custom component text")).toBeInTheDocument()
   })
 })
