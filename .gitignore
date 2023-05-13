@@ -1,5 +1,9 @@
-node_modules/
-lib/
-storybook-static/
+# Folders
+coverage
+lib
+node_modules
+storybook-static
+
+# Files
 /*tgz
 .jest-test-results.json
