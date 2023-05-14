@@ -23,8 +23,9 @@
     "storybook:build": "build-storybook",
     "test": "jest --json --outputFile=.jest-test-results.json",
     "test:watch": "npm test -- --watch",
+    "compile": "tsc",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "prepublishOnly": "npm build"
   },
   "husky": {
