@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "concurrently 'npm install' 'npm run test:watch' 'npm run storybook:start-and-test:watch'",
     "dev:docker": "docker run --rm -it -w /app -v ${PWD}:/app -p 6006:6006 $(docker build . -q) sh -c 'npm run dev'",
-    "lint": "eslint -c .eslintrc --ext .ts src",
+    "lint": "eslint . -c .eslintrc --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "storybook": "start-storybook -p 6006",
     "storybook:test": "test-storybook --browsers chromium",
