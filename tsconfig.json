@@ -13,6 +13,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "noUncheckedIndexedAccess": true, // https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess - check key exists before setting it's value
     "module": "esnext", // Sets the module system for the program - https://www.typescriptlang.org/tsconfig#module
     "moduleResolution": "node", // Specify the module resolution strategy - https://www.typescriptlang.org/tsconfig#moduleResolution
     "noEmit": true, // Do not emit compiler output files like JavaScript source code, source-maps or declarations - https://www.typescriptlang.org/tsconfig#noEmit
