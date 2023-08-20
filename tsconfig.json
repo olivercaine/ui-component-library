@@ -1,4 +1,5 @@
 {
+  "extends": "@olliecaine/tsconfig",
   "compilerOptions": { // https://www.typescriptlang.org/tsconfig
     "allowJs": true,
     "allowSyntheticDefaultImports": true, // Allows you name `* as` in import, e.g. `import React from "react"`
