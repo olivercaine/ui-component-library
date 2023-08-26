@@ -15,7 +15,6 @@
     "moduleDetection": "auto",
     "moduleResolution": "node", // Specify the module resolution strategy - https://www.typescriptlang.org/tsconfig#moduleResolution
     "noEmit": true, // Do not emit compiler output files like JavaScript source code, source-maps or declarations - https://www.typescriptlang.org/tsconfig#noEmit
-    "noUncheckedIndexedAccess": true, // https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess - check key exists before setting it's value
     "outDir": "lib", // If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.
     "skipLibCheck": true, // Skip type checking of declaration files - https://www.typescriptlang.org/tsconfig#skipLibCheck
     "types": [
