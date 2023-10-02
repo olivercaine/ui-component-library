@@ -25,6 +25,7 @@
   },
   "exclude": [
     "lib",
-    "node_modules"
+    "node_modules",
+    "rollup.config.js"
   ]
 }
