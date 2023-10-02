@@ -1,6 +1,6 @@
 import { StorybookConfig } from '@storybook/core-common'
 
-const config: StorybookConfig = {
+export const config: StorybookConfig = {
   core: {
     builder: 'webpack5'
   },
@@ -25,5 +25,3 @@ const config: StorybookConfig = {
     autodocs: true
   }
 }
-
-module.exports = config
