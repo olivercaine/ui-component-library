@@ -20,7 +20,7 @@
     "storybook:test:watch": "npm run storybook:test -- --watch",
     "storybook:start-and-test": "start-test storybook 6005 'storybook:test'",
     "storybook:start-and-test:watch": "start-test storybook 6005 'storybook:test:watch'",
-    "storybook:build": "build-storybook",
+    "storybook:build": "TS_NODE_PROJECT=.storybook/tsconfig.json build-storybook",
     "test": "jest --json --outputFile=.jest-test-results.json",
     "test:watch": "npm test -- --watch",
     "compile": "tsc",
