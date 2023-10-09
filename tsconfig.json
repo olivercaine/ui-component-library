@@ -12,7 +12,6 @@
       "esnext"
     ],
     "module": "esnext", // Sets the module system for the program - https://www.typescriptlang.org/tsconfig#module
-    "moduleDetection": "auto",
     "moduleResolution": "node", // Specify the module resolution strategy - https://www.typescriptlang.org/tsconfig#moduleResolution
     "noEmit": true, // Do not emit compiler output files like JavaScript source code, source-maps or declarations - https://www.typescriptlang.org/tsconfig#noEmit
     "outDir": "lib", // If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.
