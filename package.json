@@ -15,7 +15,7 @@
     "dev:docker": "docker run --rm -it -w /app -v ${PWD}:/app -p 6005:6005 $(docker build . -q) sh -c 'npm run dev'",
     "lint": "eslint . -c .eslintrc --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
-    "storybook": "start-storybook -p 6005",
+    "storybook": "TS_NODE_PROJECT=.storybook/tsconfig.json start-storybook -p 6005",
     "storybook:test": "test-storybook --url http://127.0.0.1:6005 --browsers chromium",
     "storybook:test:watch": "npm run storybook:test -- --watch",
     "storybook:start-and-test": "TS_NODE_PROJECT=.storybook/tsconfig.json start-test storybook 6005 'storybook:test'",
