@@ -1,0 +1,6 @@
+{
+  "extends": "..",
+  "compilerOptions": {
+    "module": "commonjs"
+  }
+}
