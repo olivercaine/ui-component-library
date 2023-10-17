@@ -45,7 +45,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.21.5",
-    "@olliecaine/eslint-config": "^1.0.4",
+    "@olliecaine/eslint-config": "^1.0.5",
     "@olliecaine/storybook-utils": "0.0.2",
     "@olliecaine/tsconfig": "^1.0.10",
     "@rollup/plugin-commonjs": "^17.0.0",
