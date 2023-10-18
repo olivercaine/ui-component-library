@@ -12,9 +12,7 @@
     }
   },
   "plugins": [
-    "no-null",
-    "promise",
-    "no-only-tests"
+    "promise"
   ],
   "env": {
     "browser" : true,
