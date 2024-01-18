@@ -1,5 +1,4 @@
-# docker build . -t olliecaine/ui-component-library:dev -f Dockerfile.dev
-# docker push olliecaine/ui-component-library:dev
+# docker buildx build  --push --tag olliecaine/ui-component-library:dev --platform=linux/arm64,linux/amd64 . --file Dockerfile.dev
 FROM node:20-alpine
 
 # Set the working directory
