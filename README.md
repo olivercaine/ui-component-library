@@ -35,10 +35,26 @@ Deploys to GitHub packages to enable easy install into other projects.
 
 ## Getting started
 
-```
+### Run the app
+
+Option 1: Using local environment:
+
+```shell
 nvm use # Switches to Node version defined in .nvmrc
 npm ci
 npm run dev
+```
+
+Option 2: Running in Docker:
+
+```shell
+npm run dev:docker
+```
+
+### View the component library
+
+```shell
+open http://127.0.0.1:6005
 ```
 
 ## How to use
@@ -53,11 +69,11 @@ npm run dev
 
 2. Install the package:
 
-```
+```shell
 npm install @olivercaine/ui-component-library@latest
 ```
 or
-```
+```shell
 yarn install @olivercaine/ui-component-library@latest
 ```
 
