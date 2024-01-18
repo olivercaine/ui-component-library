@@ -14,6 +14,7 @@ export const parameters = {
   options: {
     storySort: {
       order: [
+        // Based on GE’s Predix Design System - https://medium.com/ge-design/ges-predix-design-system-8236d47b0891
         StoryTypes.Applications,
         StoryTypes.Features,
         StoryTypes.Templates,
