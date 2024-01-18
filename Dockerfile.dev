@@ -1,0 +1,16 @@
+# docker build . -t olliecaine/ui-component-library:dev -f Dockerfile.dev
+# docker push olliecaine/ui-component-library:dev
+FROM node:20-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Install dependencies
+RUN apk add --no-cache \
+    # Dependencies for Playwright
+    udev ttf-freefont chromium \
+    # Additional tools for debugging
+    && apk add --no-cache \
+    git \
+    # Clean up unnecessary files
+    && rm -rf /var/cache/*

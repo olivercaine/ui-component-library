@@ -1,6 +1,8 @@
-FROM node:20-alpine
+# --------------- STAGE 1: Develop ---------------
+FROM olliecaine/ui-component-library:dev as stage-develop
 
-# Add any other required dev tools here
+# Expose the default Playwright port
+# EXPOSE 8585
 
-# Update .nvm when changing this file:
-# docker run --rm -it -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'node -v > .nvmrc'
+# Expose the Storybook port
+# EXPOSE 6005
