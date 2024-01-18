@@ -43,3 +43,10 @@ jobs:
 
       - name: Perform health check
         run: npm run health-check 
+
+  health-check-docker:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm run health-check:docker
