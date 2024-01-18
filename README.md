@@ -33,6 +33,8 @@ Boilerplate project built on React Storybook to enable rapid development of user
 ## Getting started
 
 ```
+nvm use # Switches to Node version defined in .nvmrc
+npm ci
 npm run dev
 ```
 
