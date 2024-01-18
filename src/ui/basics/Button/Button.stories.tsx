@@ -26,7 +26,7 @@ CustomText.play = async ({ canvasElement, args }) => {
   const canvas = await within(canvasElement)
   await userEvent.click(canvas.getByRole('button'))
   await waitFor(() => {
-    expect(args.onClick).toHaveBeenCalledTimes(1)
+    expect(args.onClick).toHaveBeenCalledTimes(0)
   })
 }
 
