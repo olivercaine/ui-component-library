@@ -63,7 +63,7 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/node-logger": "^7.0.7",
     "@storybook/react": "^6.5.16",
-    "@storybook/test-runner": "^0.10.0",
+    "@storybook/test-runner": "^0.16.0",
     "@storybook/testing-library": "0.0.13",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
@@ -91,7 +91,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
-    "start-server-and-test": "^1.15.4",
+    "start-server-and-test": "^2.0.3",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
