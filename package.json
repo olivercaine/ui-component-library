@@ -26,6 +26,7 @@
     "compile": "tsc",
     "build": "rollup -c",
     "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
+    "health-check:docker": "docker run --rm -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'npm ci && npm run health-check'",
     "prepublishOnly": "npm build"
   },
   "husky": {
