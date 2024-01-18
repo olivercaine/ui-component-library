@@ -1,0 +1,15 @@
+# docker buildx build  --push --tag olliecaine/ui-component-library:dev --platform=linux/arm64,linux/amd64 . --file Dockerfile.dev
+FROM node:20-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Install dependencies
+RUN apk add --no-cache \
+    # Dependencies for Playwright
+    udev ttf-freefont chromium \
+    # Additional tools for debugging
+    && apk add --no-cache \
+    git \
+    # Clean up unnecessary files
+    && rm -rf /var/cache/*

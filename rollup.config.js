@@ -33,7 +33,7 @@ export default {
       targets: [
         {
           src: 'src/ui/styles/styles.css',
-          dest: 'lib/src/ui/styles'
+          dest: 'dist/src/ui/styles'
         }
       ]
     })
