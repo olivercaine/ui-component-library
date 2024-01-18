@@ -16,7 +16,9 @@ Boilerplate project built on React Storybook to enable rapid development of user
 
 4. [Husky](https://typicode.github.io/husky) for performing pre-push checks
 
-5. [Concurrently](https://www.npmjs.com/package/concurrently) for running pre-push checks in parallel
+5. [Jest](https://www.npmjs.com/package/jest) and [TestingLibrary](https://testing-library.com/) for testing
+
+6. [Concurrently](https://www.npmjs.com/package/concurrently) for running pre-push checks in parallel
 
 ## Features
 
@@ -33,6 +35,8 @@ Boilerplate project built on React Storybook to enable rapid development of user
 ## Getting started
 
 ```
+nvm use # Switches to Node version defined in .nvmrc
+npm ci
 npm run dev
 ```
 

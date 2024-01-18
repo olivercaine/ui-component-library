@@ -62,7 +62,7 @@ jobs:
           name: package
     - uses: actions/setup-node@v3
       with:
-        node-version: 18.x
+        node-version: 20
         registry-url: https://npm.pkg.github.com/
         scope: '@olivercaine'
     - run: echo "registry=https://npm.pkg.github.com/@olivercaine" >> .npmrc
