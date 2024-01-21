@@ -20,19 +20,19 @@
     "storybook:test:watch": "npm run storybook:test -- --watch",
     "storybook:start-and-test": "TS_NODE_PROJECT=.storybook/tsconfig.json start-test storybook 6005 'storybook:test'",
     "storybook:start-and-test:watch": "TS_NODE_PROJECT=.storybook/tsconfig.json start-test storybook 6005 'storybook:test:watch'",
-    "storybook:build": "TS_NODE_PROJECT=.storybook/tsconfig.json build-storybook",
+    "storybook:build": "TS_NODE_PROJECT=.storybook/tsconfig.json test && build-storybook",
     "test": "jest --json --outputFile=.jest-test-results.json",
     "test:watch": "npm test -- --watch",
     "compile": "tsc",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'echo \"move `npm run storybook:start-and-test` to here from pre-push\"'",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "health-check:docker": "docker run --rm -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'npm ci && npm run health-check'",
     "prepublishOnly": "npm build"
   },
   "husky": {
     "hooks": {
       "post-commit": "npm run lint:fix",
-      "pre-push": "npm run health-check && npm run storybook:start-and-test"
+      "pre-push": "npm run health-check"
     }
   },
   "np": {
