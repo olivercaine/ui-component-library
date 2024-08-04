@@ -22,7 +22,7 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2 # Docs: https://github.com/marketplace/actions/actions-template-sync
         with:
-          source_repo_path: olivercaine/ultimate-app-spike
+          source_repo_path: olivercaine/ui-component-library
           upstream_branch: main
           is_pr_cleanup: true # Update when upstream branch is changed
           is_keep_branch_on_pr_cleanup: true # Create new PR but keep existing branch
