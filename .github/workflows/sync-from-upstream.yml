@@ -1,0 +1,28 @@
+# Requires permission: <Repo> > Settings > General > "Allow GitHub Actions to create and approve pull requests"
+
+name: Sync from upstream
+on:
+  # push: # You probably want to uncomment these 3 lines
+  #   branches:
+  #     - main
+  workflow_dispatch: # Enable manual trigger
+  # schedule:
+  #   - cron: "0 0 1 * *"
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        # with:
+        #   submodules: true
+      - name: actions-template-sync
+        uses: AndreasAugustin/actions-template-sync@v2 # Docs: https://github.com/marketplace/actions/actions-template-sync
+        with:
+          source_repo_path: olivercaine/ultimate-app-spike
+          upstream_branch: main
+          is_pr_cleanup: true # Update when upstream branch is changed
+          is_keep_branch_on_pr_cleanup: true # Create new PR but keep existing branch
