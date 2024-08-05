@@ -25,14 +25,14 @@
     "test:watch": "npm test -- --watch",
     "compile": "tsc",
     "build": "rollup -c",
-    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'echo \"move `npm run storybook:start-and-test` to here from pre-push\"'",
+    "health-check": "time concurrently --group --kill-others-on-fail --timings 'npm run lint --quiet' 'npm run compile' 'npm run build' 'npm test' 'npm run storybook:build' 'npm run storybook:start-and-test'",
     "health-check:docker": "docker run --rm -w /app -v ${PWD}:/app $(docker build . -q) sh -c 'npm ci && npm run health-check'",
     "prepublishOnly": "npm build"
   },
   "husky": {
     "hooks": {
       "post-commit": "npm run lint:fix",
-      "pre-push": "npm run health-check && npm run storybook:start-and-test"
+      "pre-push": "npm run health-check"
     }
   },
   "np": {
