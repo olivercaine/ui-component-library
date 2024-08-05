@@ -1,6 +1,6 @@
 # Boilerplate UI Component Library
 
-[![Node.js CI](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml) [![Deploy Static Storybook](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml)
+[![Node.js CI](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/node.js.yml) [![Deploy Static Storybook](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/storybook.yml)[![Publish package](https://github.com/olivercaine/ui-component-library/actions/workflows/publish.js.yml/badge.svg)](https://github.com/olivercaine/ui-component-library/actions/workflows/publish.js.yml)
 
 Boilerplate project built on React Storybook to enable rapid development of user interfaces.
 Deploys to GitHub packages to enable easy install into other projects.
