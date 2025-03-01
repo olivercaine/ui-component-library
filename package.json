@@ -63,7 +63,7 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/node-logger": "^7.0.7",
     "@storybook/react": "^6.5.16",
-    "@storybook/test-runner": "^0.16.0",
+    "@storybook/test-runner": "^0.22.0",
     "@storybook/testing-library": "0.0.13",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
