@@ -1,0 +1,56 @@
+name: Dependabot Auto-Merge
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    # Optional: specify branches if you want to limit this to certain branches
+    branches:
+      - modpack/latest # Default branch
+
+# Permissions needed for the workflow
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot-auto-merge:
+    # Only run for Dependabot PRs
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Node.js environment (optional, for npm-specific validation if needed)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # Adjust to your preferred Node.js version
+          cache: 'npm'
+
+      # Fetch Dependabot metadata to determine update type
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      # Auto-merge minor/patch updates only
+      - name: Auto-merge minor/patch updates
+        if: |
+          ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' || 
+              steps.metadata.outputs.update-type == 'version-update:semver-patch' }}
+        run: |
+          echo "Merging Dependabot PR: ${{ github.event.pull_request.title }}"
+          gh pr comment "$PR_URL" --body "Automatically merging this minor/patch update from Dependabot."
+          gh pr merge "$PR_URL" --squash --auto
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
